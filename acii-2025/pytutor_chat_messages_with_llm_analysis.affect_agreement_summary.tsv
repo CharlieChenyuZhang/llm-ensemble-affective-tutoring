@@ -1,0 +1,25 @@
+Metric	Value
+Exact emotion match (%)	43.0728088336784
+Cohen κ (emotion)	0.3102880891896851
+Pearson r (valence)	0.6203773820599761
+Pearson r (arousal)	0.19187595714853575
+Cohen κ (quadrant)	0.15625612292404778
+Cohen κ (sentiment)	0.37079851391662755
+
+
+Interpretation:
+Overall, the two models show moderate consistency but far from interchangeability. They converge on the exact same discrete-emotion label in just over 43 % of messages. Once we correct for chance with Cohen’s κ, agreement drops to 0.31, which falls in the “fair–moderate” band (roughly 0.21–0.40). In other words, they agree more often than random labelling would predict, yet a majority of messages still receive different emotion tags—important to keep in mind if you are planning to treat one model’s output as ground-truth for the other.
+
+On the continuous valence scale, consistency is much stronger: a Pearson correlation of 0.62 suggests a sizeable, statistically robust linear relationship. Both models therefore place messages along the pleasant–unpleasant axis in broadly similar ways—even if they choose different discrete emotion words. In contrast, arousal correlation is weak (r ≈ 0.19), implying the systems disagree on how activating or calm a message feels. This asymmetry lines up with prior findings that valence is easier to estimate from text, whereas arousal cues are subtler and more context-dependent.
+
+When you collapse valence and arousal into the four Kort–Picard quadrants, κ falls to 0.16 (“slight” agreement). Small numeric divergences around the mid-point (5) can shove a message into a different quadrant, so disagreement here is amplified. By contrast, the three-way sentiment bucket derived solely from valence shows κ ≈ 0.37, almost back to “fair–moderate” reliability—another sign that valence is doing most of the heavy lifting.
+
+Implications for your study:
+
+Treat Claude-Sonnet and GPT-4 emotion labels as noisy, partially overlapping views rather than interchangeable ground truths.
+
+Analyses grounded in valence will be more stable across models than those based on arousal or discrete emotion categories.
+
+If you need reliable quadrant trajectories, consider smoothing around the mid-points or using probabilistic (fuzzy) mapping instead of hard thresholds.
+
+Ensemble methods or adjudication rules could lift κ values, but for now you should report and visualise model disagreement—especially for arousal-related findings—rather than hiding it.

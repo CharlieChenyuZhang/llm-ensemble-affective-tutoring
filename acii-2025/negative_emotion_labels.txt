@@ -1,0 +1,27 @@
+anger
+anxiety
+boredom
+confusion
+disappointment
+discouragement
+disgust
+distress
+embarrassment
+fatigue
+fear
+frustration
+guilt
+helplessness
+mild disappointment
+mild embarrassment
+mild frustration
+nervousness
+overwhelm
+overwhelmed
+sadness
+shame
+slight confusion
+slight frustration
+stress
+uncertainty
+worry

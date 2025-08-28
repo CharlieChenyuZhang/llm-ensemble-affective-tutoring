@@ -1,0 +1,74 @@
+Dominant emotions across semesters
+            role emotion    n
+       assistant neutral 3906
+student assessor neutral    3
+            user neutral 4387
+
+Proportion of student sessions that follow spiral pattern:
+0.0%
+
+Half‑life of negative states (students):
+8.8 minutes
+
+Emotion distribution for user:
+  Total unique emotions: 29
+    neutral: 4387
+    confusion: 3033
+    frustration: 778
+    curiosity: 84
+    joy: 27
+    satisfaction: 23
+    gratitude: 12
+    fear: 8
+    disappointment: 7
+    anxiety: 4
+    excitement: 3
+    surprise: 2
+    confidence: 2
+    hopefulness: 2
+    stress: 2
+    apology: 2
+    nervousness: 1
+    anger: 1
+    guilt: 1
+    understanding: 1
+    relief: 1
+    determination: 1
+    affection: 1
+    not_rated: 1
+    anticipation: 1
+    contentment: 1
+    submission: 1
+    urgency: 1
+    concern: 1
+
+Emotion distribution for assistant:
+  Total unique emotions: 27
+    neutral: 3906
+    curiosity: 1100
+    satisfaction: 589
+    confusion: 503
+    encouragement: 276
+    helpfulness: 124
+    frustration: 105
+    support: 98
+    joy: 57
+    clarity: 19
+    collaboration: 10
+    supportiveness: 8
+    concern: 8
+    enthusiasm: 5
+    gratitude: 4
+    excitement: 4
+    sadness: 4
+    determination: 3
+    constructive criticism: 3
+    hopefulness: 1
+    clarification: 1
+    appreciation: 1
+    motivation: 1
+    inspiration: 1
+    guidance: 1
+    focus: 1
+    apology: 1
+

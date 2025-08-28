@@ -6,9 +6,46 @@ This repository contains the code and resources for the paper:
 
 _Accepted at ACII 2025 Late Breaking_
 
-## Getting Started
+# Pipeline Overview
 
-[Instructions for setup and reproduction will be added as the repository develops]
+## Data
+
+For **FERPA compliance**, all original student text has been replaced with masked placeholders.
+
+## 1. Labeling with LLMs
+
+- `analyze_VAL_with_llms.py` generates labels and scores using **Claude** and **GPT-4o**.
+- `analyze_VAL_with_gemini.py` generates labels and scores using **Gemini**.  
+  _Note: The prompts used are embedded directly in these scripts._
+
+## 2. Gemini Output Artifact
+
+- Running `analyze_VAL_with_gemini.py` produces the file:  
+  **`pytutor_chat_messages_with_gemini_analysis.json`**
+- For **FERPA compliance**, the original user text has been removed from this file in the repo.
+
+## 3. Ensemble Fusion
+
+- `fuse_ensemble.py` merges outputs from all models.
+- Produces: **`pytutor_chat_messages_with_ensemble.json`**
+
+## 4. Affect Analysis
+
+- `pytutor_affect_analysis.py` performs affect analysis over the fused dataset.
+
+## 5. Group by User
+
+- `group_by_user_id.py` groups chats by user ID and sorts them by timestamp.
+- Produces: **`grouped_by_user_id_sorted_by_timestamp_ensemble.json`**
+
+## 6. Temporal Dynamics
+
+- `temporal_affect_analysis.py` runs temporal analyses over the grouped dataset.
+
+---
+
+**Full Flow:**  
+LLM labeling → ensemble fusion → affect analysis → per-user grouping → temporal analysis
 
 ## Citation
 
