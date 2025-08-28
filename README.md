@@ -18,34 +18,23 @@ For **FERPA compliance**, all original student text has been replaced with maske
 - `analyze_VAL_with_gemini.py` generates labels and scores using **Gemini**.  
   _Note: The prompts used are embedded directly in these scripts._
 
-## 2. Gemini Output Artifact
-
-- Running `analyze_VAL_with_gemini.py` produces the file:  
-  **`pytutor_chat_messages_with_gemini_analysis.json`**
-- For **FERPA compliance**, the original user text has been removed from this file in the repo.
-
-## 3. Ensemble Fusion
+## 2. Ensemble Fusion
 
 - `fuse_ensemble.py` merges outputs from all models.
 - Produces: **`pytutor_chat_messages_with_ensemble.json`**
 
-## 4. Affect Analysis
+## 3. Affect Analysis
 
 - `pytutor_affect_analysis.py` performs affect analysis over the fused dataset.
 
-## 5. Group by User
-
-- `group_by_user_id.py` groups chats by user ID and sorts them by timestamp.
-- Produces: **`grouped_by_user_id_sorted_by_timestamp_ensemble.json`**
-
-## 6. Temporal Dynamics
+## 4. Temporal Dynamics
 
 - `temporal_affect_analysis.py` runs temporal analyses over the grouped dataset.
 
 ---
 
 **Full Flow:**  
-LLM labeling → ensemble fusion → affect analysis → per-user grouping → temporal analysis
+LLM labeling → ensemble fusion → affect analysis → temporal analysis
 
 ## Citation
 
